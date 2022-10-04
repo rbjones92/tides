@@ -4,7 +4,7 @@ to find and filter the best days to ride my bike to work.
 
 ![Alt Text](images/bike.jpg?raw=true "ebike on beach")
 
-![Alt Text](images/tides.jpg?raw=true "ebike on beach")
+![Alt Text](images/tides.JPG?raw=true "ebike on beach")
 
 
 # Methods
