@@ -1,4 +1,4 @@
-![Alt Text](images/bike.JPG?raw=true "ebike on beach")
+![Alt Text](images/bike.jpg?raw=true "ebike on beach")
 
 # Summary
 The best time to ride a fat-tire ebike on the beach is low tide. If I want to ride my ebike to work, it means I have to leave my house around 7am. I will write a program
