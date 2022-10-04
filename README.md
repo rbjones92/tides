@@ -8,7 +8,7 @@ to find and filter the best days to ride my bike to work.
 I will use tide data from the National Oceanic and Atmospheric Administration to find the best times to ride my ebike to work on the beach. 
 
 # Technology
-Python 3.7
-Pyspark
-Google API
+Python 3.7 <br>
+Pyspark <br>
+Google API <br>
 
