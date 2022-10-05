@@ -4,7 +4,7 @@ to find and filter the best days to ride my bike to work.
 
 ![Alt Text](images/bike.jpg?raw=true "ebike on beach")
 
-![Alt Text](images/tides.JPG?raw=true "ebike on beach")
+![Alt Text](images/tides.JPG?raw=true "tide chart")
 
 
 # Methods
@@ -15,3 +15,19 @@ Python 3.7 <br>
 Pyspark <br>
 Google API <br>
 
+# Steps
+
+1. Run tides.py to scrape NOAA webpages and grab all tide data between chosen dates.
+
+![Alt Text](images/tides_data.JPG?raw=true "tide data")
+
+2. Transform tide_df.csv with  to filter for your chosen conditions. Mine are...<br>
+...1. Monday thru Friday
+...2. Low Tide
+...3. Between 7am and 9am
+
+![Alt Text](images/transformed_tides.JPG?raw=true "tide data")
+
+3. Add elements to Google Calendar
+
+![Alt Text](images/calendar.JPG?raw=true "calendar")
