@@ -28,6 +28,6 @@ Google API <br>
 
 ![Alt Text](images/tides_transformed.JPG?raw=true "tide data")
 
-3. Add elements to Google Calendar
+3. Add elements to Google Calendar with gcal_api_conn.py
 
 ![Alt Text](images/calendar.JPG?raw=true "calendar")
