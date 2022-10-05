@@ -30,4 +30,4 @@ Google API <br>
 
 3. Add elements to Google Calendar with gcal_api_conn.py
 
-![Alt Text](images/calendar.JPG?raw=true "calendar")
+![Alt Text](images/tide_calendar.JPG?raw=true "calendar")
