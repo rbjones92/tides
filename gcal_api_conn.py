@@ -18,7 +18,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar.readonly','https://www.googl
 all_events = []
 
 
-def main():
+def connect():
 
     ### Establish credentials and grab token #### 
     creds = None
@@ -53,37 +53,56 @@ def list_events(service):
 
 
 def create_event(service):
-    ### CREATE AN EVENT ###
+
+    ### ADD TIDES EVENTS TO GOOGLE CALENDAR###
+
+    import pandas as pd
+    df = pd.read_csv('C:/Users/Robert.Jones/OneDrive - Central Coast Energy Services, Inc/Documents/Python_Projects/tides/transformed.csv/tide_transformed.csv')
+
+    df_dates = df[df.columns[1]]
+    df_ft = df[df.columns[2]]
+    df_time = df[df.columns[3]]
+    date_list = df_dates.values.tolist()
+    ft_list = df_ft.values.tolist()
+    time_list = df_time.values.tolist()
+
     colors = service.colors().get().execute()
 
-    event_request_body = {
-        'start' : {
-            'dateTime': NOW,
-        },
-        'end': {
-            'dateTime': NOW,
-        },
-        'summary': 'Testing Testicles',
-        'description': 'testy testicles',
-        'colorId': 5,
-        'status': 'confirmed',
-        'visibility':'public',
-        'location':'Scrotumville'
-    }
+    for j in range(len(date_list)):
 
-    response = service.events().insert(
-        calendarId = 'robertbjones92@gmail.com',
-        body = event_request_body
-    ).execute()
+        date_list[j] = datetime.datetime(int(date_list[j][0:4]),int(date_list[j][5:7]),int(date_list[j][8:]),int(time_list[j][0:2]),int(time_list[j][3:5])).isoformat()
+        print(date_list[j])
+
+    for i in range(len(date_list)):
+
+        event_request_body = {
+            'start' : {
+                'dateTime': date_list[i],
+                'timeZone': 'PST'
+            },
+            'end': {
+                'dateTime': date_list[i],
+                'timeZone': 'PST'
+            },
+            'summary': 'Beach Ebike Day',
+            'description': f'tide at {ft_list[i]} feet',
+            'colorId': 5,
+            'status': 'confirmed',
+            'visibility':'public',
+            'location':'Moss Landing, CA'
+        }
+
+        response = service.events().insert(
+            calendarId = 'robertbjones92@gmail.com',
+            body = event_request_body
+        ).execute()
 
 
-if __name__ == '__main__':
-    main()
 
 
 ### LIST EVENTS ### 
-# list_events(main())
+# list_events(connect())
         
 ### CREATE EVENT ###
-create_event(main())
+# create_event(connect())
 
