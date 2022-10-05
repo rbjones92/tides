@@ -15,16 +15,16 @@ Python 3.7 <br>
 Pyspark <br>
 Google API <br>
 
-# Steps
+# Program Run
 
 1. Run tides.py to scrape NOAA webpages and grab all tide data between chosen dates.
 
 ![Alt Text](images/tides_data.JPG?raw=true "tide data")
 
-2. Transform tide_df.csv with  to filter for your chosen conditions. Mine are...<br>
-...1. Monday thru Friday
-...2. Low Tide
-...3. Between 7am and 9am
+2. Transform tide_df.csv with transform_tides_df.py to filter for your chosen conditions. Mine are...<br>
+...1. Monday thru Friday <br>
+...2. Low Tide <br>
+...3. Between 7am and 9am <br>
 
 ![Alt Text](images/transformed_tides.JPG?raw=true "tide data")
 
