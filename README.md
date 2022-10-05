@@ -26,7 +26,7 @@ Google API <br>
 ...2. Low Tide <br>
 ...3. Between 7am and 9am <br>
 
-![Alt Text](images/transformed_tides.JPG?raw=true "tide data")
+![Alt Text](images/tides_transformed.JPG?raw=true "tide data")
 
 3. Add elements to Google Calendar
 
